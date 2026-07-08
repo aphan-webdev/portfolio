@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: rgba(244, 240, 232, 1);
+  --foreground: rgba(23, 23, 23, 1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 350px 200px 200px;
+  grid-template-areas:
+    "left themepack themepack webdocs"
+    "left code-cleaner course-builder webdocs"
+    "about-me code-cleaner strata tools";
+  gap: 14px;
+}
+
+/* photo card fills the desktop "left" column naturally via flex-1 */
+.photo-card {
+  min-height: 0;
+}
+
+.identity-card {
+  min-height: 220px;
+}
+
+/* ── medium: 2-column, about-me beside the name/photo block ── */
+@media (max-width: 900px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "left about-me"
+      "themepack themepack"
+      "webdocs strata"
+      "course-builder course-builder"
+      "code-cleaner tools";
+  }
+
+  .bento-grid > * {
+    min-height: 180px;
+  }
+
+  .photo-card {
+    min-height: 200px;
+  }
+
+  .identity-card {
+    min-height: 160px;
+  }
+}
+
+/* ── small mobile: single column, about-me immediately after name/photo ── */
+@media (max-width: 560px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "about-me"
+      "themepack"
+      "webdocs"
+      "strata"
+      "course-builder"
+      "code-cleaner"
+      "tools";
+  }
+
+  .photo-card {
+    min-height: 180px;
+  }
+
+  .identity-card {
+    min-height: 140px;
+  }
 }
