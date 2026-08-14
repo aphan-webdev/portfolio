@@ -3,14 +3,28 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  role?: string;
+  highlights?: string[];
+  images?: string[];
+  repoUrl?: string;
+  npmUrl?: string;
 }
 
 export const PROJECTS: Project[] = [
   {
     id: "themepack",
     title: "Themepack",
-    description: "A customizable theming solution for modern web apps.",
-    tags: ["design", "themes", "ui"],
+    description: "Theming toolkit powering 60+ course designs in D2L Brightspace.",
+    tags: ["TypeScript", "D2L Brightspace", "Accessibility", "SCSS"],
+    role: "Front-end developer on a small team at Pima CLT — contributed to architecture, the widget library, and build tooling.",
+    highlights: [
+      "63 interchangeable per-program themes built on one shared component library",
+      "30+ self-initializing, accessible widgets — accordions, tabs, persistent checklists, dark mode, and more",
+      "Zero-dependency vanilla TypeScript, so courses never ship a framework runtime to students",
+      "Dark mode and other accessibility features injected directly into D2L's shadow DOM",
+    ],
+    repoUrl: "https://github.com/franreyn/pimaonline-themepack",
+    npmUrl: "https://www.npmjs.com/package/@pimaonline/pimaonline-themepack",
   },
   {
     id: "webdocs",
