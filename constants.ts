@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     title: "Themepack",
     description: "Theming toolkit powering 60+ course designs in D2L Brightspace.",
     tags: ["TypeScript", "D2L Brightspace", "Accessibility", "SCSS"],
-    role: "Front-end developer on a small team at Pima CLT — contributed to architecture, the widget library, and build tooling.",
+    role: "Introduced Stylelint and cleaned up CSS specificity across every theme, refactored DOM mutation observers into a shared manager, and built the steps widget, banner animations, and a dark-mode-only view option.",
     highlights: [
       "63 interchangeable per-program themes built on one shared component library",
       "30+ self-initializing, accessible widgets — accordions, tabs, persistent checklists, dark mode, and more",
@@ -29,8 +29,16 @@ export const PROJECTS: Project[] = [
   {
     id: "webdocs",
     title: "Webdocs",
-    description: "An online documentation platform for managing and publishing docs.",
-    tags: ["documentation", "web", "tools"],
+    description: "Documentation site for building D2L Brightspace courses with the Themepack.",
+    tags: ["Next.js", "React", "Documentation", "CSS"],
+    role: "Built the site's foundation — navbar, homepage carousel, docs grid with sticky sidebar and TOC highlighting, and the widgets, utilities, and getting-started pages — then added premade templates and docs for the animation library and new widgets.",
+    highlights: [
+      "Live, interactive demos of 28 widgets, 10 plugins, and 7 utilities, each with a show-and-copy code snippet",
+      "Gallery of 52 program themes with screenshots, descriptions, and layout previews",
+      "14 ready-to-paste page templates across one-column, two-column, and statement-of-work layouts",
+      "Help guides that walk instructional designers and faculty through adding templates, Panopto, and YouTube to D2L",
+    ],
+    repoUrl: "https://github.com/franreyn/pimaonline-webdocs",
   },
   {
     id: "code-cleaner",
