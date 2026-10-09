@@ -43,8 +43,16 @@ export const PROJECTS: Project[] = [
   {
     id: "code-cleaner",
     title: "Code Cleaner",
-    description: "A tool to automatically clean and format your source code.",
-    tags: ["code", "tools", "productivity"],
+    description: "Automation tool that audits, fixes, and formats course markup built with the Themepack.",
+    tags: ["Node.js", "Gulp", "React", "Accessibility"],
+    role: "Wrote cleaners that strip empty tags, comments, and stray attributes and sync each page's title to its h1, plus log checks for iframe titles, figcaptions, iframe-only pages, and deprecated classes, IDs, and scripts — then refactored the checks into modules and fixed error navigation in the web editor.",
+    highlights: [
+      "Gulp pipeline that beautifies and cleans entire D2L course packages in one pass",
+      "25+ check modules that flag heading order, missing alt text and iframe titles, invalid nesting, and deprecated Themepack markup by line number",
+      "React and CodeMirror editor for uploading a course folder, jumping between errors, and saving fixes in place",
+      "Files are auto-cleaned on upload and re-scanned after each save, so the error list stays current",
+    ],
+    repoUrl: "https://github.com/franreyn/code-cleaner",
   },
   {
     id: "course-builder",
