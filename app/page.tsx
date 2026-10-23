@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Nav from "./components/Nav";
-import PhotoCard from "./components/PhotoCard";
 import ThemepackCard from "./components/ThemepackCard";
 import WebdocsCard from "./components/WebdocsCard";
 import IdentityCard from "./components/IdentityCard";
@@ -24,14 +23,13 @@ export default function Home() {
       <Nav />
       <div className="bento-grid">
         <div className="flex flex-col" style={{ gridArea: "left" }}>
-          <PhotoCard />
+          <AboutMeCard />
           <IdentityCard />
         </div>
         <ThemepackCard />
         <WebdocsCard />
         <StrataCard />
         <CourseBuilderCard />
-        <AboutMeCard />
         <CodeCleanerCard />
         <ToolsCard />
       </div>
