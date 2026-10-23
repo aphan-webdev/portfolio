@@ -24,33 +24,34 @@ body {
   grid-template-areas:
     "left themepack themepack webdocs"
     "left code-cleaner course-builder webdocs"
-    "about-me code-cleaner strata tools";
+    "left code-cleaner strata tools";
   gap: 14px;
 }
 
 /* photo card fills the desktop "left" column naturally via flex-1 */
 .photo-card {
   min-height: 0;
+  max-height: 400px;
 }
 
 .identity-card {
-  min-height: 220px;
+  min-height: 340px;
+  max-height: 420px;
 }
 
 button:not(:disabled) {
   cursor: pointer;
 }
 
-/* ── medium: 2-column, about-me beside the name/photo block ── */
+/* ── medium: 2-column, webdocs beside the name/photo block ── */
 @media (max-width: 900px) {
   .bento-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "left about-me"
+      "left webdocs"
       "themepack themepack"
-      "webdocs strata"
-      "course-builder course-builder"
+      "course-builder strata"
       "code-cleaner tools";
   }
 
@@ -63,17 +64,17 @@ button:not(:disabled) {
   }
 
   .identity-card {
-    min-height: 160px;
+    min-height: 260px;
+    max-height: 360px;
   }
 }
 
-/* ── small mobile: single column, about-me immediately after name/photo ── */
+/* ── small mobile: single column ── */
 @media (max-width: 560px) {
   .bento-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
       "left"
-      "about-me"
       "themepack"
       "webdocs"
       "strata"
@@ -87,6 +88,7 @@ button:not(:disabled) {
   }
 
   .identity-card {
-    min-height: 140px;
+    min-height: 240px;
+    max-height: 340px;
   }
 }
