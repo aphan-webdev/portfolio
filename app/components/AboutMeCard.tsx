@@ -1,18 +1,19 @@
+import Image from "next/image";
+
 export default function AboutMeCard() {
   return (
     <div
-      className="rounded-2xl p-5 flex flex-col justify-between"
-      style={{ background: "rgba(224, 212, 193, 1)", gridArea: "about-me" }}
+      className="photo-card relative overflow-hidden flex-1 rounded-t-2xl min-h-0"
+      style={{ background: "rgba(28, 28, 28, 1)" }}
     >
-      <div>
-        <h2 className="text-2xl font-black text-gray-900">About Me</h2>
-        <p className="text-base font-medium text-gray-600 mt-1">
-          Thanks for stopping by!
-        </p>
-      </div>
-      <button className="self-end w-8 h-8 rounded-2xl bg-black/10 flex items-center justify-center font-bold text-xl text-gray-900 hover:bg-black/20 transition-colors">
-        +
-      </button>
+      <Image
+        src="/images/profile.jpg"
+        alt="Portrait of Anh-Thu Phan"
+        fill
+        sizes="(min-width: 900px) 25vw, 100vw"
+        className="object-cover"
+        priority
+      />
     </div>
   );
 }
