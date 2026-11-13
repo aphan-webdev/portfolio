@@ -63,8 +63,17 @@ export const PROJECTS: Project[] = [
   {
     id: "strata-ui",
     title: "Strata UI",
-    description: "A collection of UI components for rapid app development.",
-    tags: ["ui", "components", "library"],
+    description: "HTML templating system that turns custom tags into themed, responsive pages for online courses.",
+    tags: ["TypeScript", "Custom Elements", "SCSS", "Webpack"],
+    role: "Set up the build pipeline — webpack, Sass, and JSX templates rendered to static HTML — and the Docsify docs site with light and dark mode, then built the columns widget, button links, and footer, modularized the JS and CSS, and wrote how-to-use and how-to-dev docs for most widgets.",
+    highlights: [
+      "Readable custom tags like <accordion-widget> and <callout-widget> that course authors write by hand and the library turns into styled components",
+      "Widgets for accordions, tabs, sliders, vocab cards, assignments, callouts, tables, and more",
+      "Six color themes built on one shared set of SCSS variables",
+      "One- and two-column page layouts generated from JSX templates at build time, with no framework shipped to students",
+    ],
+    repoUrl: "https://github.com/franreyn/pimaonline-strataui",
+    npmUrl: "https://www.npmjs.com/package/@pimaonline/pimaonline-strataui",
   },
 ];
 
